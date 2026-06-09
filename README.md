@@ -140,13 +140,15 @@ Project documentation will be organized under the `docs/` folder:
 
 ```text
 docs/
-├── 01-escopo-v1.md
-├── 02-requisitos-funcionais.md
-├── 03-requisitos-nao-funcionais.md
-├── 04-lgpd-e-privacidade.md
-├── 05-modelagem-dados.md
-├── 06-roadmap.md
-└── 07-decisoes-tecnicas.md
+├── escopo-v1.md
+├── requisitos-funcionais.md
+├── requisitos-nao-funcionais.md
+├── lgpd-e-privacidade.md
+├── modelagem-dados.md
+├── roadmap.md
+├── decisoes-tecnicas.md
+├── validacao-prototipo-local.md
+└── plano-migracao-garimpa-ai-hub.md
 ```
 
 Prompts used for prototyping and AI generation will be stored under the `prompts/` folder.
