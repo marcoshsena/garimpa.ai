@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.3 - Validação funcional do protótipo local
+
+### Validado
+
+- Protótipo executado localmente após correção do store.
+- Páginas Produtos e Salvos abriram sem erro.
+- Lógica principal do app validada.
+- Gerador de anúncios funcionando em nível inicial.
+- Área admin funcionando em nível inicial.
+
+### Identificado
+
+- Necessidade de ajustes visuais.
+- Necessidade de melhoria nos textos do Gerador de Anúncios.
+- Próxima etapa será refinamento de UX e conteúdo.
+
 ## 0.1.2 - Correção inicial do protótipo local
 
 ### Corrigido
