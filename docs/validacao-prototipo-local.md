@@ -16,9 +16,9 @@ Registrar a validação inicial do protótipo gerado pelo Lovable e executado lo
 ## Comandos utilizados
 
 ```bash
-
 npm install --legacy-peer-deps
 npm run dev
+```
 
 ## Resultado da segunda validação local
 
