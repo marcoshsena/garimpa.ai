@@ -49,3 +49,38 @@ Os próximos ajustes identificados são principalmente de experiência visual e 
 - Melhorar cards e responsividade.
 - Revisar prompts/textos do gerador de anúncios.
 - Registrar novos bugs ou melhorias em issues separadas.
+
+## Validação da tela de comparativo
+
+Após ajustes na estrutura de rotas do TanStack Router, a página `/produto/:id/comparativo` passou a renderizar corretamente a tela de comparação entre marketplaces.
+
+### Problema identificado
+
+A URL `/produto/:id/comparativo` estava carregando a tela de detalhes do produto, e não a tela de comparativo.
+
+Isso acontecia porque a rota pai `/produto/:id` renderizava diretamente o componente de detalhes e não possuía um `Outlet` para renderizar rotas filhas.
+
+### Correção aplicada
+
+- A rota `/produto/:id` passou a funcionar como layout pai.
+- A tela de detalhes foi movida para uma rota index.
+- A rota `/produto/:id/comparativo` passou a renderizar a tela correta de comparação.
+
+### Resultado
+
+A tela de comparativo agora exibe:
+
+- produto base;
+- ofertas por marketplace;
+- seletor de marketplaces;
+- comparação vertical;
+- melhor preço;
+- melhor avaliação;
+- melhor prova social;
+- melhor comissão;
+- melhor opção geral sugerida;
+- ações por oferta.
+
+### Status
+
+Validação concluída com sucesso.
