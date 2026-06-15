@@ -49,3 +49,40 @@ O repositório principal `garimpa.ai` registra esta decisão para manter o hist�
 ### Status
 
 Decisão aplicada no protótipo local e registrada como referência para as próximas etapas de desenvolvimento.
+
+## 006 — Separar produto base de oferta por marketplace
+
+**Data:** 2026-06-14
+
+### Contexto
+
+A proposta do Garimpa AI exige comparar o mesmo produto, ou produtos equivalentes, em diferentes marketplaces.
+
+Durante os testes, foi identificado que alguns componentes misturavam dados de fontes diferentes, como exibir a tag de um marketplace e o preço de outro.
+
+### Decisão
+
+Foi reforçada a separação entre:
+
+- **Produto base:** representa a ideia principal do produto.
+- **Oferta de marketplace:** representa uma oferta específica daquele produto em Amazon, Mercado Livre, Shopee, Magalu ou outro marketplace.
+
+### Motivo
+
+Essa separação é necessária para:
+
+- comparar ofertas entre marketplaces;
+- calcular a melhor opção em runtime;
+- filtrar oportunidades pelos marketplaces usados pelo usuário;
+- preparar o projeto para futuras APIs oficiais;
+- evitar inconsistências como preço de um marketplace e tag de outro.
+
+### Impacto
+
+A lógica do dashboard, dos cards e do comparativo deve sempre usar dados de uma oferta específica ao exibir marketplace, preço, avaliação, vendas, comissão e disponibilidade.
+
+O campo `bestMarketplace` do produto base passa a ser considerado apenas legado/mock, e não deve ser usado como fonte principal para decisões de comparação.
+
+### Status
+
+Decisão aplicada na lógica inicial do protótipo e registrada para orientar as próximas evoluções.
