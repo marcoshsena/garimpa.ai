@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.1.4 - Correção da rota de comparativo e lógica de ofertas
+
+### Corrigido
+
+- Corrigida a rota `/produto/:id/comparativo`, que estava exibindo a tela de detalhes do produto em vez da tela de comparação.
+- Separada a rota pai do produto da tela de detalhes usando uma rota index dedicada.
+- A tela de comparativo passou a renderizar corretamente as ofertas por marketplace.
+- Corrigida inconsistência visual em que o card/tela podia exibir marketplace de uma oferta e preço de outra.
+
+### Adicionado
+
+- Tela de comparativo vertical entre marketplaces.
+- Seletor de marketplaces para comparação.
+- Destaques para melhor preço, melhor avaliação, melhor prova social, melhor entrega, melhor comissão e melhor opção geral.
+- Resumo de análise com recomendação da melhor oferta.
+- Dados mockados mais realistas para ofertas por marketplace.
+
+### Técnico
+
+- Reforçada a separação entre produto base e oferta de marketplace.
+- `Product` representa o produto principal.
+- `Offer` representa a oferta específica em Amazon, Mercado Livre, Shopee ou Magalu.
+- A melhor oferta deve ser calculada em runtime, e não depender apenas de um campo fixo no produto.
+
+### Próximo passo
+
+- Melhorar o Gerador de Anúncios para usar a oferta selecionada no comparativo e gerar textos mais chamativos, claros e adequados para cada canal.
+
 ## 0.1.3 - Validação funcional do protótipo local
 
 ### Validado
