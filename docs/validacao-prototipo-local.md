@@ -84,3 +84,38 @@ A tela de comparativo agora exibe:
 ### Status
 
 Validação concluída com sucesso.
+
+## Validação do Gerador de Anúncios Multicanal
+
+O Gerador de Anúncios foi testado após a evolução dos formatos de conteúdo.
+
+### Funcionalidades validadas
+
+- Seleção de produto.
+- Seleção de oferta por marketplace.
+- Geração de conteúdo para WhatsApp curto.
+- Geração de conteúdo para WhatsApp completo.
+- Geração de conteúdo para Telegram.
+- Geração de legenda para Instagram Feed.
+- Geração de estrutura para Instagram Carrossel.
+- Geração de sequência para Stories.
+- Geração de roteiro para Reels.
+- Geração de conteúdo para TikTok.
+- Geração de prompts premium para vídeo IA.
+- Cópia individual de blocos.
+- Cópia completa do conteúdo gerado.
+
+### Resultado
+
+O gerador passou a funcionar como uma ferramenta multicanal, criando conteúdos mais organizados para diferentes formatos de publicação.
+
+### Limitações atuais
+
+- A geração ainda é baseada em templates locais.
+- Ainda não há integração com IA real.
+- Ainda não há conexão com APIs oficiais de marketplaces.
+- Os links afiliados ainda precisam ser inseridos manualmente.
+
+### Status
+
+Validação concluída com sucesso.
