@@ -86,3 +86,41 @@ O campo `bestMarketplace` do produto base passa a ser considerado apenas legado/
 ### Status
 
 Decisão aplicada na lógica inicial do protótipo e registrada para orientar as próximas evoluções.
+
+## 007 — Evoluir o gerador para conteúdo multicanal estruturado
+
+**Data:** 2026-06-15
+
+### Contexto
+
+O Gerador de Anúncios inicialmente produzia textos simples em poucos formatos, como WhatsApp, Instagram, Reels e Stories.
+
+Com a evolução do Garimpa AI, o gerador passou a precisar atender diferentes canais de divulgação, como WhatsApp, Telegram, Instagram, TikTok e formatos premium para prompts de vídeo com IA.
+
+### Decisão
+
+Foi decidido refatorar o gerador para trabalhar com blocos estruturados de conteúdo.
+
+Em vez de retornar apenas um texto único, a função de geração passa a produzir blocos como:
+
+- Gancho;
+- Legenda;
+- Roteiro;
+- Texto na tela;
+- CTA;
+- Hashtags;
+- Prompt para vídeo IA.
+
+### Motivo
+
+Essa estrutura permite adaptar melhor o conteúdo a cada canal e deixa o sistema preparado para futuras integrações com IA real.
+
+### Impacto
+
+O gerador passa a ser mais flexível, reutilizável e preparado para novos formatos de conteúdo.
+
+Também fica mais fácil permitir que o usuário copie partes específicas do conteúdo gerado.
+
+### Status
+
+Decisão aplicada no protótipo local.
