@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.1.5 - Evolução do gerador multicanal de anúncios
+
+### Adicionado
+
+- Novos formatos de geração de conteúdo para WhatsApp, Telegram, Instagram, Stories, Reels e TikTok.
+- Formatos premium para prompts de vídeo com IA.
+- Geração de conteúdo em blocos, como gancho, legenda, roteiro, CTA, hashtags e prompt IA.
+- Resumo da oferta selecionada dentro do gerador.
+- Botão para copiar cada bloco individualmente.
+- Botão para copiar todo o conteúdo gerado.
+
+### Melhorado
+
+- O gerador passou a usar melhor os dados da oferta selecionada.
+- Os textos gerados ficaram mais específicos para cada canal.
+- O fluxo de geração agora considera produto base, marketplace, preço, avaliação, vendas aproximadas, comissão e ponto de atenção.
+- A interface do gerador ficou mais organizada para múltiplos formatos.
+
+### Técnico
+
+- Refatorado `adTemplates.ts` para retornar blocos estruturados de conteúdo.
+- Atualizado `AdGenerator.tsx` para renderizar múltiplos blocos por formato.
+- Mantida a geração local com dados mockados, sem integração real com IA externa nesta etapa.
+
+### Próximo passo
+
+- Revisar visual e usabilidade do gerador.
+- Planejar futura integração com IA real e APIs oficiais de marketplaces.
+
 ## 0.1.4 - Correção da rota de comparativo e lógica de ofertas
 
 ### Corrigido
