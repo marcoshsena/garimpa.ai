@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.1.6 - Polimento visual do MVP
+
+### Adicionado
+
+- Cards de resumo no Dashboard.
+- Melhor organização dos filtros de marketplace, categoria, nota, comissão e ordenação.
+- Fallback visual para imagens ausentes ou quebradas.
+- Melhor hierarquia visual nos cards de produto.
+- Melhorias visuais na tela de produto.
+- Melhorias visuais na tela de comparativo.
+- Melhorias visuais no gerador multicanal.
+- Ajustes visuais na tela de produtos salvos e área administrativa.
+
+### Melhorado
+
+- O Dashboard passou a se apresentar como uma central de oportunidades.
+- Os cards de produto ficaram mais claros e profissionais.
+- A identidade visual ficou mais consistente entre as telas.
+- O uso de azul escuro, laranja, branco e cinza claro foi refinado.
+- A experiência geral ficou mais próxima de um produto SaaS.
+
+### Técnico
+
+- Mantida a lógica atual de produtos, ofertas, comparativo e gerador.
+- Não foram adicionadas APIs, autenticação, Supabase ou pagamentos nesta etapa.
+- As mudanças foram focadas em UX, UI e responsividade.
+
+### Próximo passo
+
+- Validar o fluxo completo após o polimento.
+- Corrigir eventuais problemas visuais ou funcionais encontrados.
+- Planejar a próxima fase: integração com dados reais/APIs oficiais.
+
 ## 0.1.5 - Evolução do gerador multicanal de anúncios
 
 ### Adicionado

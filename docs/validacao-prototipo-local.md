@@ -119,3 +119,78 @@ O gerador passou a funcionar como uma ferramenta multicanal, criando conteúdos 
 ### Status
 
 Validação concluída com sucesso.
+
+## Validação do polimento visual do MVP
+
+Após a Fase 1 de polimento visual e UX, o MVP do Garimpa AI foi validado localmente para garantir que as melhorias de interface não quebraram o fluxo principal da aplicação.
+
+### Objetivo da validação
+
+Confirmar que o Garimpa AI continua funcionando corretamente após os ajustes visuais aplicados nas principais telas do produto.
+
+O foco desta validação foi o fluxo:
+
+* Landing page;
+* Dashboard;
+* Cards de produto;
+* Tela de detalhes do produto;
+* Tela de comparativo entre marketplaces;
+* Gerador multicanal de anúncios;
+* Produtos salvos;
+* Área administrativa.
+
+### Rotas validadas
+
+Foram testadas localmente as seguintes rotas:
+
+* `/`
+* `/dashboard`
+* `/produto/:id`
+* `/produto/:id/comparativo`
+* `/gerador`
+* `/gerador?produto=:id`
+* `/gerador?produto=:id&oferta=:id`
+* `/salvos`
+* `/admin/produtos`
+* `/admin/ofertas`
+
+### Pontos validados
+
+* A landing page continua carregando corretamente.
+* O dashboard passou a exibir uma estrutura mais próxima de uma central de oportunidades.
+* Os filtros de marketplace, categoria, nota, comissão e ordenação continuam funcionando.
+* Os cards de produto continuam exibindo dados coerentes da melhor oferta.
+* O card não deve misturar preço de um marketplace com tag de outro.
+* O botão “Comparar” leva corretamente para a tela de comparativo.
+* O botão “Anúncio” leva corretamente para o gerador com produto e oferta selecionados.
+* A tela de comparativo continua exibindo ofertas por marketplace.
+* O resumo da análise continua indicando a melhor opção sugerida.
+* O gerador multicanal continua exibindo os formatos configurados.
+* Os botões de copiar conteúdo continuam funcionando.
+* A tela de produtos salvos continua acessível.
+* A área administrativa continua acessível para cadastro manual.
+* A interface permanece responsiva em telas menores.
+
+### Melhorias observadas
+
+* Dashboard com visual mais profissional.
+* Cards de resumo no topo do Dashboard.
+* Filtros mais organizados.
+* Cards de produto com melhor hierarquia visual.
+* Fallback visual para imagens ausentes ou quebradas.
+* Tela de comparativo mais clara e focada na decisão.
+* Gerador multicanal mais organizado.
+* Identidade visual mais consistente entre as telas.
+
+### Limitações atuais
+
+* Os dados ainda são mockados.
+* Ainda não há integração com APIs reais de marketplaces.
+* Ainda não há integração com IA real.
+* Os links afiliados ainda são inseridos manualmente.
+* As imagens de produto ainda dependem de URLs externas ou mockadas.
+* A área administrativa ainda é simples e voltada ao MVP.
+
+### Status
+
+Validação concluída com sucesso para a Fase 1 de polimento visual do MVP.

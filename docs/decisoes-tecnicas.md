@@ -124,3 +124,88 @@ Também fica mais fácil permitir que o usuário copie partes específicas do co
 ### Status
 
 Decisão aplicada no protótipo local.
+
+## 008 — Polimento visual do MVP antes de integrar APIs
+
+**Data:** 2026-06-17
+
+### Contexto
+
+Após a implementação da lógica principal do Garimpa AI, o MVP já possuía:
+
+* listagem de produtos;
+* filtros por marketplace;
+* comparação entre ofertas;
+* melhor opção sugerida;
+* geração multicanal de anúncios;
+* área administrativa simples;
+* produtos salvos.
+
+Apesar da lógica estar funcional, a interface ainda precisava transmitir mais confiança, clareza e profissionalismo para se aproximar da experiência esperada de um produto SaaS.
+
+### Decisão
+
+Foi decidido realizar uma fase de polimento visual e UX antes de avançar para integrações mais complexas, como APIs oficiais de marketplaces, autenticação, Supabase ou IA real.
+
+A Fase 1 de polimento visual teve foco em:
+
+* melhorar a landing page;
+* transformar o dashboard em uma central de oportunidades;
+* melhorar a hierarquia visual dos cards;
+* corrigir imagens quebradas com fallback visual;
+* melhorar a tela de comparativo;
+* melhorar a apresentação do gerador multicanal;
+* manter a identidade visual baseada em azul escuro, laranja, branco e cinza claro.
+
+### Motivo
+
+Antes de integrar dados reais, o MVP precisa demonstrar valor de forma clara.
+
+A decisão de polir a interface antes das APIs ajuda a:
+
+* validar melhor a experiência do usuário;
+* tornar o projeto mais apresentável para portfólio;
+* facilitar demonstrações futuras;
+* reduzir a percepção de protótipo inacabado;
+* melhorar a clareza do fluxo principal;
+* evitar adicionar complexidade sobre uma interface ainda pouco madura.
+
+### Direção visual adotada
+
+A identidade visual foi mantida com:
+
+* azul escuro como cor principal, transmitindo confiança, tecnologia e análise;
+* laranja como cor de ação para CTAs e destaques;
+* branco e cinza claro como base de leitura;
+* verde discreto para oportunidades, sucesso e melhor opção;
+* amarelo discreto para alertas e pontos de atenção.
+
+A intenção é transmitir uma experiência moderna, limpa, confiável e profissional, evitando aparência de site promocional agressivo.
+
+### Impacto
+
+A interface passou a comunicar melhor a proposta do Garimpa AI:
+
+* encontrar produtos com potencial;
+* comparar marketplaces;
+* escolher a melhor oferta;
+* gerar conteúdos prontos para divulgação.
+
+O dashboard ganhou mais aparência de ferramenta analítica, os cards ficaram mais informativos e o fluxo principal ficou mais consistente visualmente.
+
+### Fora do escopo
+
+Nesta fase, não foram incluídos:
+
+* APIs reais de marketplaces;
+* autenticação;
+* Supabase;
+* pagamentos;
+* integração com OpenAI API;
+* geração real de imagens;
+* geração real de vídeos;
+* publicação automática em redes sociais.
+
+### Status
+
+Decisão aplicada no MVP e validada localmente.
