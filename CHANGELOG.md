@@ -1,5 +1,52 @@
 # Changelog
 
+## 0.2.0 - Inteligência local de recomendação
+
+### Adicionado
+
+* Criada camada local de recomendação para produtos e ofertas.
+* Adicionado arquivo `recommendations.ts` para centralizar a lógica de diagnóstico.
+* Adicionado Diagnóstico Garimpa AI na tela de comparativo.
+* Adicionado Diagnóstico Garimpa AI compacto na tela de produto.
+* Adicionadas tags inteligentes nos cards do Dashboard.
+* Adicionada indicação de formatos recomendados no Gerador de Anúncios.
+* Adicionada sugestão de canais no Gerador com base na oferta selecionada.
+
+### Melhorado
+
+* O comparativo passou a explicar melhor por que uma oferta é sugerida.
+* A tela de produto passou a mostrar potencial, risco e canais recomendados.
+* O Dashboard passou a exibir sinais rápidos de oportunidade nos cards.
+* O Gerador passou a destacar formatos mais adequados para cada produto/oferta.
+* A experiência geral ficou mais próxima de um assistente de decisão para afiliados.
+
+### Técnico
+
+* A lógica de recomendação ainda é local, baseada em dados mockados ou persistidos no navegador.
+* Nenhuma API externa foi adicionada nesta etapa.
+* Nenhuma integração com OpenAI, Supabase, autenticação ou marketplace real foi incluída.
+* A estrutura foi preparada para futura evolução com dados reais e IA generativa.
+
+### Critérios considerados
+
+A recomendação local considera, quando disponível:
+
+* preço;
+* avaliação;
+* número de avaliações;
+* vendas aproximadas;
+* comissão estimada;
+* disponibilidade;
+* categoria do produto;
+* ponto forte;
+* ponto de atenção;
+* público ideal;
+* melhor oferta calculada.
+
+### Status
+
+Primeira versão da inteligência local implementada e validada no protótipo.
+
 ## 0.1.6 - Polimento visual do MVP
 
 ### Adicionado

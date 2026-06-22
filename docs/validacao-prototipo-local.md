@@ -194,3 +194,56 @@ Foram testadas localmente as seguintes rotas:
 ### Status
 
 Validação concluída com sucesso para a Fase 1 de polimento visual do MVP.
+
+## Validação da inteligência local de recomendação
+
+Foi validada a primeira versão da camada de inteligência local do Garimpa AI.
+
+### Objetivo
+
+Adicionar recomendações locais para ajudar o usuário a entender melhor o potencial de cada produto e oferta, sem depender ainda de APIs externas ou IA real.
+
+### Funcionalidades validadas
+
+* Diagnóstico Garimpa AI exibido na tela de comparativo.
+* Diagnóstico Garimpa AI exibido na tela de produto.
+* Tags inteligentes exibidas nos cards do Dashboard.
+* Formatos recomendados exibidos no Gerador de Anúncios.
+* Canais sugeridos exibidos no Gerador com base na oferta selecionada.
+* Recomendações atualizadas conforme a melhor oferta disponível.
+* Fluxo de navegação preservado entre Dashboard, Produto, Comparativo e Gerador.
+
+### Telas validadas
+
+* `/dashboard`
+* `/produto/:id`
+* `/produto/:id/comparativo`
+* `/gerador`
+* `/gerador?produto=:id`
+* `/gerador?produto=:id&oferta=:id`
+
+### Resultado
+
+A aplicação passou a exibir sinais mais claros de oportunidade para o usuário, incluindo:
+
+* potencial de divulgação;
+* potencial visual;
+* risco de divulgação;
+* motivos da recomendação;
+* canais recomendados;
+* abordagem sugerida;
+* tags inteligentes;
+* formatos recomendados no gerador.
+
+### Limitações atuais
+
+* A recomendação ainda é baseada em regras locais.
+* Os dados ainda são mockados ou persistidos localmente.
+* Ainda não há uso de APIs oficiais de marketplaces.
+* Ainda não há integração com OpenAI ou outra IA externa.
+* A recomendação deve ser tratada como apoio à decisão, não como garantia de venda ou resultado.
+
+### Status
+
+Validação concluída com sucesso.
+

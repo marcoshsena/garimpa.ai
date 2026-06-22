@@ -209,3 +209,80 @@ Nesta fase, não foram incluídos:
 ### Status
 
 Decisão aplicada no MVP e validada localmente.
+
+## 009 — Criar camada local de recomendação
+
+**Data:** 2026-06-22
+
+### Contexto
+
+Após a criação do comparativo entre marketplaces e do gerador multicanal de anúncios, o Garimpa AI passou a precisar explicar melhor por que uma oferta ou produto é considerado uma boa oportunidade.
+
+Apenas mostrar preço, avaliação, vendas e comissão não era suficiente para transmitir inteligência ao usuário.
+
+### Decisão
+
+Foi criada uma camada local de recomendação no arquivo:
+
+```text
+src/lib/garimpa/recommendations.ts
+```
+
+Essa camada é responsável por gerar diagnósticos e sinais de oportunidade a partir dos dados já existentes no protótipo.
+
+### A camada gera
+
+* potencial de divulgação;
+* potencial visual;
+* risco de divulgação;
+* canais recomendados;
+* abordagem sugerida;
+* motivos da recomendação;
+* tags inteligentes.
+
+### Motivo
+
+Separar a lógica de recomendação em um arquivo próprio evita duplicação entre telas e facilita a evolução futura do produto.
+
+A mesma lógica pode ser reaproveitada em:
+
+* Dashboard;
+* Tela de produto;
+* Tela de comparativo;
+* Gerador de anúncios.
+
+### Critérios utilizados
+
+A primeira versão considera dados como:
+
+* preço;
+* avaliação;
+* número de avaliações;
+* vendas aproximadas;
+* comissão estimada;
+* disponibilidade;
+* categoria;
+* ponto forte;
+* ponto de atenção;
+* melhor oferta calculada.
+
+### Impacto
+
+Com essa decisão, o Garimpa AI deixa de ser apenas um catálogo visual e passa a atuar como um assistente inicial de decisão para afiliados.
+
+A interface passou a mostrar:
+
+* diagnóstico no comparativo;
+* diagnóstico compacto na página de produto;
+* tags inteligentes nos cards;
+* formatos recomendados no gerador.
+
+### Limitações
+
+A recomendação ainda é baseada em regras locais e dados mockados.
+
+Ela não utiliza APIs externas, IA generativa, histórico real de preços ou dados reais de conversão.
+
+### Status
+
+Decisão aplicada na primeira versão da Fase 2.
