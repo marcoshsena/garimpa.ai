@@ -286,3 +286,85 @@ Ela não utiliza APIs externas, IA generativa, histórico real de preços ou dad
 ### Status
 
 Decisão aplicada na primeira versão da Fase 2.
+
+## 009 — Preparar modelagem para dados reais de marketplace
+
+**Data:** 2026-06-22
+
+### Contexto
+
+Após a implementação da inteligência local de recomendação, o Garimpa AI passou a precisar de uma base de dados mais próxima do que será necessário em futuras integrações com marketplaces.
+
+A estrutura anterior de `Product` e `Offer` era suficiente para o protótipo visual, mas ainda limitada para lidar com dados reais, como identificadores externos, histórico de preço, vendedor, parcelamento, fonte dos dados e status de atualização.
+
+### Decisão
+
+Foi decidido expandir a modelagem interna do projeto para suportar dados mais ricos de marketplaces, mantendo compatibilidade com o MVP atual.
+
+Os campos novos foram adicionados como opcionais para evitar quebra nos dados mockados, telas existentes e fluxos já validados.
+
+### Alterações principais
+
+Foram adicionados tipos auxiliares para:
+
+* origem dos dados;
+* status de sincronização;
+* condição do produto;
+* moeda;
+* atributos técnicos;
+* galeria de imagens;
+* histórico de preço;
+* qualidade dos dados.
+
+Também foram adicionados campos opcionais em `Product` e `Offer` para preparar o projeto para integrações futuras.
+
+### Motivo
+
+A preparação antecipada da modelagem reduz o risco de retrabalho quando o projeto começar a consumir APIs reais.
+
+Com essa decisão, futuras integrações poderão seguir o fluxo:
+
+```text
+Dado externo/API
+↓
+Normalizer/Adapter
+↓
+Product / Offer interno
+↓
+Dashboard, Produto, Comparativo e Gerador
+```
+
+### Impacto
+
+A aplicação passou a suportar internamente dados como:
+
+* marca;
+* modelo;
+* descrição longa;
+* atributos técnicos;
+* identificadores externos;
+* vendedor;
+* loja;
+* preço anterior;
+* parcelamento;
+* entrega estimada;
+* estoque;
+* condição;
+* histórico de preço;
+* fonte;
+* status de sincronização;
+* confiança do dado.
+
+Na interface, a primeira aplicação visual desses novos campos foi feita na tela de comparativo, exibindo metadados da oferta por marketplace.
+
+### Limitações
+
+A preparação ainda não consome APIs reais.
+
+Os dados continuam sendo mockados ou locais.
+
+Não foram adicionados scraping, autenticação, Supabase, OpenAI ou integrações externas nesta etapa.
+
+### Status
+
+Decisão aplicada na Fase 2.2.

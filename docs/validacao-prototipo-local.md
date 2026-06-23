@@ -247,3 +247,62 @@ A aplicação passou a exibir sinais mais claros de oportunidade para o usuário
 
 Validação concluída com sucesso.
 
+## Validação da preparação para dados reais de marketplace
+
+Foi validada a primeira etapa de preparação do Garimpa AI para futura integração com dados reais de marketplaces.
+
+### Objetivo
+
+Preparar a estrutura interna do projeto para lidar com dados mais completos de produtos e ofertas, sem integrar APIs reais nesta etapa.
+
+### Funcionalidades validadas
+
+* Expansão dos tipos `Product` e `Offer`.
+* Criação de tipos auxiliares para origem, sincronização, histórico de preço, condição, moeda e qualidade dos dados.
+* Enriquecimento dos dados mockados com informações simuladas de marketplace.
+* Exibição de metadados da oferta no comparativo.
+* Criação de camada inicial de normalização de dados externos.
+* Preservação do funcionamento atual do MVP.
+
+### Telas validadas
+
+* `/dashboard`
+* `/produto/:id`
+* `/produto/:id/comparativo`
+* `/gerador`
+* `/salvos`
+* `/admin`
+
+### Dados exibidos no comparativo
+
+A tela de comparativo passou a exibir, quando disponível:
+
+* vendedor;
+* preço anterior;
+* parcelamento;
+* entrega estimada;
+* condição;
+* estoque estimado;
+* última verificação;
+* fonte dos dados;
+* status de sincronização.
+
+### Resultado
+
+A aplicação manteve o funcionamento esperado e passou a demonstrar uma estrutura mais próxima de um comparador real de marketplaces.
+
+A alteração não teve como objetivo mudar profundamente o visual do produto, mas sim validar que a aplicação suporta dados mais ricos sem quebrar os fluxos existentes.
+
+### Limitações atuais
+
+* Os dados ainda são mockados.
+* Ainda não há integração com APIs oficiais de marketplaces.
+* Ainda não há autenticação.
+* Ainda não há persistência em banco externo.
+* Ainda não há histórico visual de preço.
+* Ainda não há adapters específicos por marketplace.
+* Ainda não há integração com IA generativa externa.
+
+### Status
+
+Validação concluída com sucesso após execução do build.

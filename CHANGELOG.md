@@ -1,5 +1,57 @@
 # Changelog
 
+## 0.2.1 - Preparação para dados reais de marketplace
+
+### Adicionado
+
+* Expandida a modelagem de `Product` e `Offer` para suportar dados mais próximos de APIs reais.
+* Adicionados tipos auxiliares para origem dos dados, status de sincronização, condição do produto, moeda, histórico de preço e qualidade dos dados.
+* Adicionados campos opcionais para marca, modelo, descrição longa, atributos técnicos, galeria de imagens e identificadores externos.
+* Adicionados campos opcionais em ofertas para vendedor, loja, preço anterior, parcelamento, entrega estimada, estoque, condição, histórico de preço e fonte dos dados.
+* Enriquecidos os dados mockados para simular melhor informações vindas de marketplaces.
+* Adicionada exibição de metadados da oferta na tela de comparativo.
+* Criada camada inicial de normalização de dados externos em `normalizers.ts`.
+
+### Melhorado
+
+* A estrutura do Garimpa AI ficou mais preparada para receber dados reais de marketplaces no futuro.
+* O comparativo passou a exibir dados mais completos por oferta, como vendedor, preço anterior, parcelamento, condição, última verificação, fonte e status.
+* Os dados mockados passaram a representar melhor um cenário de integração futura com APIs.
+* A separação entre dados externos, dados normalizados e dados internos ficou mais clara.
+
+### Técnico
+
+* A expansão dos tipos foi feita com campos opcionais para preservar compatibilidade com o MVP atual.
+* Nenhuma API externa foi integrada nesta etapa.
+* Nenhuma chamada real para Mercado Livre, Amazon, Shopee, Magalu ou outro marketplace foi adicionada.
+* A camada `normalizers.ts` prepara a transformação futura de dados externos para os formatos internos `Product` e `Offer`.
+* O MVP continua funcionando com dados mockados e localStorage.
+
+### Critérios considerados
+
+A preparação para dados reais considera, quando disponível:
+
+* origem do dado;
+* status de sincronização;
+* identificador externo do produto;
+* identificador externo da oferta;
+* vendedor ou loja;
+* preço atual;
+* preço anterior;
+* parcelamento;
+* frete;
+* entrega estimada;
+* estoque;
+* condição do produto;
+* histórico de preço;
+* última verificação;
+* confiabilidade do dado.
+
+### Status
+
+Preparação inicial para dados reais concluída e validada com build.
+
+
 ## 0.2.0 - Inteligência local de recomendação
 
 ### Adicionado
